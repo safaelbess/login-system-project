@@ -4,7 +4,8 @@ from tkinter import messagebox
 
 # Create a dictionary to simulate teacher and student data
 teacher_data = {
-    "teacher1": "password1",
+    "teacher1"       
+    : "password1",
     "teacher2": "password2"
 }
 
@@ -41,7 +42,7 @@ def register(username, password, role):
     if role == "teacher":
         # You can implement teacher registration logic here
         teacher_data[username] = {"password": password, "courses": [], "grades": {}}
-     #messagebox.showinfo("Register", "Registration successful!")
+    messagebox.showinfo("Register", "Registration successful!")
         pass
     elif role == "student":
         student_data[username] = {"password": password, "courses": [], "grades": {}}
@@ -158,7 +159,7 @@ def open_teacher_page(username):
     teacher_page.title("Teacher Page")
     teacher_page.geometry("500x500")
 
-    label_teacher = Label(teacher_page, text=f"Welcome, {username}!")
+    label_teacher = Label(teacher_page, text=f"Welcome Dr, {username}!")
     label_teacher.pack()
 
     def add_student():
